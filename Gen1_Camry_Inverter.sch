@@ -520,15 +520,15 @@ Connection ~ 4250 1700
 Wire Wire Line
 	4250 1700 4250 1725
 $Comp
-L Device:C C?
+L Device:CP C?
 U 1 1 5EED2D45
 P 4525 1700
 F 0 "C?" V 4273 1700 50  0000 C CNN
-F 1 "22uF/10v" V 4364 1700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 4563 1550 50  0001 C CNN
+F 1 "47uF/10v" V 4364 1700 50  0000 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-15_AVX-H" H 4563 1550 50  0001 C CNN
 F 3 "~" H 4525 1700 50  0001 C CNN
 	1    4525 1700
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	4525 1550 4525 1350
@@ -546,17 +546,6 @@ Wire Wire Line
 Wire Wire Line
 	4525 2050 4525 1850
 Connection ~ 4250 2050
-$Comp
-L Device:C C?
-U 1 1 5EEDACBB
-P 4900 1700
-F 0 "C?" V 4648 1700 50  0000 C CNN
-F 1 "22uF/10v" V 4739 1700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 4938 1550 50  0001 C CNN
-F 3 "~" H 4900 1700 50  0001 C CNN
-	1    4900 1700
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	4900 1850 4900 2050
 Wire Wire Line
@@ -568,39 +557,22 @@ Wire Wire Line
 	4900 1350 4525 1350
 Connection ~ 4525 1350
 $Comp
-L Device:C C?
+L Device:CP C?
 U 1 1 5EEDFA17
 P 1900 1600
 F 0 "C?" V 1648 1600 50  0000 C CNN
-F 1 "10uF/35v" V 1739 1600 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 1938 1450 50  0001 C CNN
+F 1 "22uF/35v" V 1739 1600 50  0000 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N" H 1938 1450 50  0001 C CNN
 F 3 "~" H 1900 1600 50  0001 C CNN
 	1    1900 1600
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C?
-U 1 1 5EEE2F26
-P 1525 1600
-F 0 "C?" V 1273 1600 50  0000 C CNN
-F 1 "10uF/35v" V 1364 1600 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 1563 1450 50  0001 C CNN
-F 3 "~" H 1525 1600 50  0001 C CNN
-	1    1525 1600
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	1900 1450 1900 1250
 Wire Wire Line
 	1525 1450 1525 1250
 Wire Wire Line
 	1525 1250 1900 1250
 Wire Wire Line
-	1900 1750 1900 2050
-Wire Wire Line
 	1525 1750 1525 2050
-Wire Wire Line
-	1525 2050 1900 2050
 Wire Wire Line
 	2975 1650 2975 2050
 Connection ~ 2975 2050
@@ -654,14 +626,11 @@ Wire Wire Line
 Wire Wire Line
 	2275 1250 2525 1250
 Connection ~ 2525 1250
-Wire Wire Line
-	1900 2050 2275 2050
 Connection ~ 2275 2050
 Wire Wire Line
 	1900 1250 2275 1250
 Connection ~ 2275 1250
 Connection ~ 1900 1250
-Connection ~ 1900 2050
 $Comp
 L Regulator_SwitchedCapacitor:LM2776 U?
 U 1 1 5EF4E100
@@ -824,46 +793,208 @@ Wire Wire Line
 $Comp
 L Regulator_Linear:LD1117S33TR_SOT223 U?
 U 1 1 5EFE6EE6
-P 3875 2700
-F 0 "U?" H 3875 2942 50  0000 C CNN
-F 1 "REG1117" H 3875 2851 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3875 2900 50  0001 C CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 3975 2450 50  0001 C CNN
-	1    3875 2700
+P 4075 2725
+F 0 "U?" H 4075 2967 50  0000 C CNN
+F 1 "REG1117" H 4075 2876 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4075 2925 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 4175 2475 50  0001 C CNN
+	1    4075 2725
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D?
 U 1 1 5EFE975A
-P 3875 2350
-F 0 "D?" H 3875 2567 50  0000 C CNN
-F 1 "CDBA540-HF" H 3875 2476 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA" H 3875 2350 50  0001 C CNN
-F 3 "~" H 3875 2350 50  0001 C CNN
-	1    3875 2350
+P 4075 2375
+F 0 "D?" H 4075 2592 50  0000 C CNN
+F 1 "CDBA540-HF" H 4075 2501 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 4075 2375 50  0001 C CNN
+F 3 "~" H 4075 2375 50  0001 C CNN
+	1    4075 2375
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5EFED090
-P 3275 2550
-F 0 "#PWR?" H 3275 2400 50  0001 C CNN
-F 1 "+5V" H 3290 2723 50  0000 C CNN
-F 2 "" H 3275 2550 50  0001 C CNN
-F 3 "" H 3275 2550 50  0001 C CNN
-	1    3275 2550
+P 3375 2700
+F 0 "#PWR?" H 3375 2550 50  0001 C CNN
+F 1 "+5V" H 3390 2873 50  0000 C CNN
+F 2 "" H 3375 2700 50  0001 C CNN
+F 3 "" H 3375 2700 50  0001 C CNN
+	1    3375 2700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3575 2700 3550 2700
+	3775 2725 3750 2725
 Wire Wire Line
-	3550 2700 3550 2350
+	3750 2725 3750 2375
 Wire Wire Line
-	3550 2350 3725 2350
+	3750 2375 3925 2375
 Wire Wire Line
-	4025 2350 4200 2350
+	4225 2375 4400 2375
 Wire Wire Line
-	4200 2350 4200 2700
+	4400 2375 4400 2725
 Wire Wire Line
-	4200 2700 4175 2700
+	4400 2725 4375 2725
+$Comp
+L Device:D D?
+U 1 1 5EE40152
+P 1525 1600
+F 0 "D?" H 1525 1383 50  0000 C CNN
+F 1 "CDBA540-HF" H 1525 1474 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 1525 1600 50  0001 C CNN
+F 3 "~" H 1525 1600 50  0001 C CNN
+	1    1525 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5EE428FE
+P 4900 1700
+F 0 "D?" H 4900 1483 50  0000 C CNN
+F 1 "CDBA540-HF" H 4900 1574 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 4900 1700 50  0001 C CNN
+F 3 "~" H 4900 1700 50  0001 C CNN
+	1    4900 1700
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EE51CFC
+P 3750 2900
+F 0 "C?" V 3525 2900 50  0000 C CNN
+F 1 "0.1uF/50v" V 3589 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3788 2750 50  0001 C CNN
+F 3 "~" H 3750 2900 50  0001 C CNN
+	1    3750 2900
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EE529CF
+P 4400 2900
+F 0 "C?" V 4148 2900 50  0000 C CNN
+F 1 "0.1uF/50v" V 4239 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4438 2750 50  0001 C CNN
+F 3 "~" H 4400 2900 50  0001 C CNN
+	1    4400 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 2750 3750 2725
+Connection ~ 3750 2725
+Wire Wire Line
+	4400 2750 4400 2725
+Connection ~ 4400 2725
+Wire Wire Line
+	3750 3050 3750 3075
+Wire Wire Line
+	3750 3075 4075 3075
+Wire Wire Line
+	4400 3075 4400 3050
+Wire Wire Line
+	4075 3025 4075 3075
+Connection ~ 4075 3075
+Wire Wire Line
+	4075 3075 4400 3075
+$Comp
+L power:GND #PWR?
+U 1 1 5EE74864
+P 4075 3100
+F 0 "#PWR?" H 4075 2850 50  0001 C CNN
+F 1 "GND" V 4080 2972 50  0000 R CNN
+F 2 "" H 4075 3100 50  0001 C CNN
+F 3 "" H 4075 3100 50  0001 C CNN
+	1    4075 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4075 3100 4075 3075
+Wire Wire Line
+	3375 2750 3375 2725
+Wire Wire Line
+	3375 2725 3750 2725
+Wire Wire Line
+	3375 3050 3375 3075
+Wire Wire Line
+	3375 3075 3750 3075
+Connection ~ 3750 3075
+Wire Wire Line
+	4775 3050 4775 3075
+Wire Wire Line
+	4775 3075 4400 3075
+Connection ~ 4400 3075
+Wire Wire Line
+	4775 2750 4775 2725
+Wire Wire Line
+	4775 2725 4400 2725
+Wire Wire Line
+	3375 2700 3375 2725
+Connection ~ 3375 2725
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EEA2445
+P 4775 2700
+F 0 "#PWR?" H 4775 2550 50  0001 C CNN
+F 1 "+3V3" H 4790 2873 50  0000 C CNN
+F 2 "" H 4775 2700 50  0001 C CNN
+F 3 "" H 4775 2700 50  0001 C CNN
+	1    4775 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 2700 4775 2725
+Connection ~ 4775 2725
+$Comp
+L Device:D D?
+U 1 1 5EEC91B6
+P 5100 2900
+F 0 "D?" H 5100 2683 50  0000 C CNN
+F 1 "CDBA540-HF" H 5100 2774 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 5100 2900 50  0001 C CNN
+F 3 "~" H 5100 2900 50  0001 C CNN
+	1    5100 2900
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5100 2750 5100 2725
+Wire Wire Line
+	5100 2725 4775 2725
+Wire Wire Line
+	5100 3050 5100 3075
+Wire Wire Line
+	5100 3075 4775 3075
+Connection ~ 4775 3075
+$Comp
+L Device:CP C?
+U 1 1 5EEE9F2F
+P 3375 2900
+F 0 "C?" V 3150 2850 50  0000 L CNN
+F 1 "10uF/10v" V 3225 2725 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I" H 3413 2750 50  0001 C CNN
+F 3 "~" H 3375 2900 50  0001 C CNN
+	1    3375 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5EEED60E
+P 4775 2900
+F 0 "C?" V 5000 2850 50  0000 L CNN
+F 1 "10uF/10v" V 4925 2725 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I" H 4813 2750 50  0001 C CNN
+F 3 "~" H 4775 2900 50  0001 C CNN
+	1    4775 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 2050 1900 2050
+Wire Wire Line
+	1900 1450 1900 1250
+Wire Wire Line
+	1900 1750 1900 2050
+Connection ~ 1900 2050
+Wire Wire Line
+	1900 2050 2275 2050
+Text Notes 1475 3700 0    50   ~ 0
+Tantalum capacitors *will* fail if they are ever exposed to a reverse voltage condition.\nReverse blockage diodes are used for said tantalum capacitors, however\nthey are not necessary for circuit operation. Therefore they are optional
 $EndSCHEMATC
